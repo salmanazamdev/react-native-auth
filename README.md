@@ -1,6 +1,3 @@
-Got it 👍 — here’s a **simple `README.md`** for your new React Native Auth project:
-
-````markdown
 # React Native Auth
 
 A simple React Native project to explore authentication (Google Sign-In, Firebase Auth, etc.).
