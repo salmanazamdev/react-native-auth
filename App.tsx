@@ -17,7 +17,7 @@ function App() {
   useEffect(() => {
     // Configure Google Sign-In
     GoogleSignin.configure({
-      webClientId: 'YOUR_WEB_CLIENT_ID.apps.googleusercontent.com', 
+      webClientId: '620250915616-91abe9ebp5h39rv7uvc8dvg0teoanrn6.apps.googleusercontent.com', 
       offlineAccess: true, // if you want to access Google APIs on behalf of the user
     });
   }, []);
