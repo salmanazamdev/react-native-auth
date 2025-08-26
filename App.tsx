@@ -67,12 +67,20 @@ function AppContent() {
     <View style={[styles.container, { paddingTop: safeAreaInsets.top }]}>
       {userInfo ? (
         <View style={styles.profileContainer}>
-          {/* Add null check for photo */}
-          {userInfo.user?.photo && (
-            <Image source={{ uri: userInfo.user.photo }} style={styles.profileImage} />
+          {/* Correct path: userInfo.data.user.photo */}
+          {userInfo.data?.user?.photo && (
+            <Image 
+              source={{ uri: userInfo.data.user.photo }} 
+              style={styles.profileImage} 
+            />
           )}
-          <Text style={styles.text}>Welcome, {userInfo.user?.name || 'User'}</Text>
-          <Text style={styles.text}>Email: {userInfo.user?.email || 'No email'}</Text>
+          <Text style={styles.text}>
+            Welcome, {userInfo.data?.user?.name || 'User'}
+          </Text>
+          <Text style={styles.text}>
+            Email: {userInfo.data?.user?.email || 'No email'}
+          </Text>
+          <Text style={styles.text}>ID: {userInfo.data?.user?.id || 'No ID'}</Text>
           <Button title="Sign Out" onPress={signOut} />
         </View>
       ) : (
