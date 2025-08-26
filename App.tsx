@@ -40,6 +40,7 @@ function AppContent() {
       const user = await GoogleSignin.signIn();
       setUserInfo(user);
       console.log('User Info:', user);
+      console.log('Full user object:', JSON.stringify(user, null, 2));
     } catch (error: any) {
       if (error.code === statusCodes.SIGN_IN_CANCELLED) {
         console.log('User cancelled the login flow');
@@ -66,9 +67,12 @@ function AppContent() {
     <View style={[styles.container, { paddingTop: safeAreaInsets.top }]}>
       {userInfo ? (
         <View style={styles.profileContainer}>
-          <Image source={{ uri: userInfo.user.photo }} style={styles.profileImage} />
-          <Text style={styles.text}>Welcome, {userInfo.user.name}</Text>
-          <Text style={styles.text}>Email: {userInfo.user.email}</Text>
+          {/* Add null check for photo */}
+          {userInfo.user?.photo && (
+            <Image source={{ uri: userInfo.user.photo }} style={styles.profileImage} />
+          )}
+          <Text style={styles.text}>Welcome, {userInfo.user?.name || 'User'}</Text>
+          <Text style={styles.text}>Email: {userInfo.user?.email || 'No email'}</Text>
           <Button title="Sign Out" onPress={signOut} />
         </View>
       ) : (
