@@ -81,7 +81,7 @@ android {
 
     namespace "com.reactnativeauth"
     defaultConfig {
-        applicationId "com.reactnativeauth"
+        applicationId "com.reactnativeauth.test"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
