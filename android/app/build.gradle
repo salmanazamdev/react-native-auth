@@ -85,6 +85,11 @@ android {
         versionCode 1
         versionName "1.0"
     }
+    externalNativeBuild {
+        cmake {
+            version "4.0.3"
+        }
+    }
     signingConfigs {
         debug {
             storeFile file('debug.keystore')
