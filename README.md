@@ -221,8 +221,7 @@ Built with ❤️ and lots of debugging sessions!
 
 ## 📚 Related Articles
 
-- [Complete Guide to Google OAuth 2.0 in React Native Android (2025)](link-to-medium-article)
-- [LinkedIn Post: Google Sign-In Journey](link-to-linkedin-post)
+- [Complete Guide to Google OAuth 2.0 in React Native Android (2025)](https://medium.com/@salmanazam/the-complete-guide-to-google-oauth-in-react-native-android-from-setup-hell-to-success-2025-23b024e935c9)
 
 ---
 
