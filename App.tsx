@@ -1,7 +1,4 @@
-/**
- * Google Sign-In React Native Example
- * Using @react-native-google-signin/google-signin
- */
+
 
 import React, { useEffect, useState } from 'react';
 import { StatusBar, StyleSheet, useColorScheme, View, Button, Text, Image } from 'react-native';
